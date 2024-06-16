@@ -17,6 +17,7 @@ useGSAP(()=>{
    
   })
   
+  
 
   return (
     <div  className="text h-[15vh] w-full bg-[#54472288] flex justify-between items-center ">
