@@ -36,11 +36,11 @@ function White4() {
       },
     })
 
-    gsap.from(".d-3",{
+    gsap.from(".d-3 ",{
       opacity:0,
       duration:1,
+      stagger:.5,
       x:-200,
-      stagger:true,
       scrollTrigger: {
         trigger: ".d-3",
         // markers: true,
@@ -52,7 +52,7 @@ function White4() {
       opacity:0,
       duration:1,
       x:200,
-      stagger:true,
+      stagger:-.7,
       scrollTrigger: {
         trigger: ".d-4",
         // markers: true,

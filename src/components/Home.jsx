@@ -3,19 +3,20 @@ import Nav from "./Nav";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 function Home() {
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger);
 
-  let tl = gsap.timeline();
+  var tl = gsap.timeline();
   useGSAP(() => {
-    tl.from(".t-1", {
+    tl.from(".t-1 H1", {
       x: -200,
       duration: 1.2,
       delay: 3,
       opacity: 0,
-      stagger: true,
+      stagger: 0.2,
       ease: "power3.out",
     });
 
@@ -26,16 +27,24 @@ function Home() {
     });
   });
 
+  
+  
+
+  
+
   return (
     <>
       <Nav />
+
       <div
-        data-scroll
-        className="  overflow-x-auto h-screen bg-[url(https://images.unsplash.com/photo-1597861405049-0b011428568f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center w-full"
+        className=" h-screen bg-[url(https://images.unsplash.com/photo-1597861405049-0b011428568f?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-cover bg-center w-full"
       >
-        <div className="t-1  hover:scale-[1.1] absolute left-[10%] top-[30%] text-[15vh] leading-[13vh] text-center font-bold tracking-tighter ">
-          <h1 className="text-white  opacity-65 hover:opacity-100 ">SWATHI</h1>
-          <h1 className="text-black  opacity-65 hover:opacity-100">& HARI</h1>
+        
+        <div
+          className="t-1  hover:scale-[1.1] opacity-65 hover:opacity-100 absolute left-[10%] top-[30%] text-[15vh] leading-[13vh] text-center font-bold tracking-tighter "
+        >
+          <h1 className="text-white  ">SWATHI</h1>
+          <h1 className="text-black ">& HARI</h1>
         </div>
 
         <div className="t-2 absolute left-[54%] top-[37%] text-[2.6vh] capitalize tracking-tighter font-semibold flex justify-evenly items-center h-[15vh] w-[35%] rounded-full bg-[#d8bd7141] ">
